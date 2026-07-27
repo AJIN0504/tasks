@@ -1,0 +1,30 @@
+<script>
+
+
+var in_v = [];
+var con = [];
+var vowel = ['a','e','i','o','u'];
+
+var str = prompt("Enter the string:");
+
+
+for(i=0 ; i<str.length; i++) {
+  if (vowel.includes(str[i].toLowerCase() )){
+    in_v.push(str[i]);
+    }
+  else{
+     con.push(str[i]);
+        }
+    }
+
+    
+
+document.write("Given: " + str + "<br>");
+document.write("vowels present in given string : " + in_v + "<br>");
+document.write("not in vowels: " + con + "<br>");
+</script>
+
+
+
+
+

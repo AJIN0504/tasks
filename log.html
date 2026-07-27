@@ -1,0 +1,56 @@
+
+
+<script>
+
+var originals = {
+                 "user1": {"user_name": "ajin","password": "naj123"},
+                 "user2": {"user_name": "subin","password": "sub123"},
+                 "user3":{"user_name":"jishnu","password": "jish123"},
+                }
+                
+
+function login(user, pass) {
+
+    if (user == originals.user1.user_name && pass == originals.user1.password) {
+        
+        document.write("Welcome Ajin");
+        val = true;
+    }
+    else if (user == originals.user2.user_name && pass == originals.user2.password) {
+
+        document.write("Welcome Subin");
+        val = true;
+    }
+    else if (user == originals.user3.user_name && pass == originals.user3.password) {
+
+        document.write("Welcome Jishnu");
+        val = true;
+    }
+    else {
+
+        document.write("Wrong Username or Password");
+        val = false;
+    }
+  }
+
+//for(attempt = 1 ; attempt<=3 ; attempt++){
+//var attempt = 1;
+//while(attempt<=3){
+var username = prompt("Enter Username:");
+var password = prompt("Enter Password:");
+login(username, password);
+
+//if(val == true){
+  //login(username, password);
+ // break;
+ // }
+/*else{
+  attempt++
+  }*/
+ // } 
+  
+</script>
+
+
+
+

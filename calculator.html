@@ -1,0 +1,72 @@
+<script>
+
+class Calculator {
+    constructor(a,b){
+    this.a = a;
+    this.b = b;
+    }
+    
+    add() {
+        return this.a + this.b;
+        }
+
+    subtract() {
+        return this.a - this.b;
+       }
+
+    multiply(){
+        return this.a * this.b;
+       }
+
+    divide() {
+        if (this.b == 0) {
+            return "Cannot divide by zero";
+        }
+        return this.a / this.b;
+    }
+    exponent() {
+        return this.a**this.b;
+        }
+    }
+
+
+
+var num1 = Number(window.prompt("Enter first number:"));
+var num2 = Number(window.prompt("Enter second number:"));
+var op = window.prompt("Enter operation to be performed [ +, -, *, /,** ]:");
+
+var calc = new Calculator(num1,num2);
+var result;
+switch(op) {
+    case "+":
+        result = calc.add();
+        break;
+
+    case "-":
+        result = calc.subtract();
+        break;
+
+    case "*":
+        result = calc.multiply();
+        break;
+
+    case "/":
+        result = calc.divide();
+        break;
+    case "**":
+        result = calc.exponent();
+        break;
+
+    default:
+        result = "Invalid operator";
+}
+
+document.write("First Number: " + num1 + "<br>");
+document.write("Second Number: " + num2 + "<br>");
+document.write("Operator given : " + op + "<br>");
+document.write("the Result is : " + result);
+
+</script>
+
+
+

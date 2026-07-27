@@ -1,0 +1,49 @@
+<script>
+
+class Height {
+    constructor(l,r) {
+        this.l = l;   // slant height
+        this.r = r;   // radius
+    }
+
+    calc_height() {
+        var h = Math.sqrt((this.l * this.l) - (this.r * this.r));
+        return h;
+    }
+}
+
+class Volume extends Height {
+
+    constructor(l,r) {
+        super(l,r);
+    }
+
+    calc_volume() {
+        var h = this.calc_height();   
+        var v = (1/3) * 3.14 * this.r * this.r * h;
+        return v;
+          
+    }
+   calc_surface() {
+          
+        var s = (3.14 *this.r * this.r) + (3.14 * this.r *this.l);
+        return s;
+        }
+}
+
+var length = Number(window.prompt("Enter slant height:"));
+var radius = Number(window.prompt("Enter radius:"));
+
+var heigh = new Height(length, radius);
+
+document.write("Calculated Height = " + heigh.calc_height() + "<br/>");
+
+var volume = new Volume(length, radius);
+
+
+document.write("Calculated Volume = " + volume.calc_volume()+ "<br/>");
+
+
+document.write("Calculated surface area = " + volume.calc_surface()+ "<br/>");
+
+</script>
